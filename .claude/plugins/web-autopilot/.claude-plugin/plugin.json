@@ -1,0 +1,9 @@
+{
+  "name": "web-autopilot",
+  "version": "0.1.0",
+  "description": "Figma-to-production web service automation pipeline. Transforms Figma designs into complete fullstack applications (Next.js + FastAPI + PostgreSQL) through 6 phases: design analysis, requirements, architecture, implementation, QA, and completion.",
+  "author": {
+    "name": "OMC Community"
+  },
+  "keywords": ["figma", "web", "automation", "fullstack", "nextjs", "fastapi", "design-to-code"]
+}
