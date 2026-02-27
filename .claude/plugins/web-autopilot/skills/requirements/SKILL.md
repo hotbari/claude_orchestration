@@ -80,7 +80,7 @@ if (state.phases['design-analysis'] !== 'completed') {
 `.omc/web-projects/{service}/docs/design-analysis.md` 읽기
 
 **추출:**
-- 컴포넌트 인벤토리 (UI 요소, 폼, 내비게이션)
+- 컴포넌트 인벤토리
 - 사용자 플로우가 포함된 화면/페이지 목록
 - Design token 및 인터랙션 패턴
 - 콘텐츠 구조 및 텍스트 레이블

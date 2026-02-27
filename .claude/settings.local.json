@@ -1,11 +1,17 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(ls:*)",
+      "Bash(test -f:*)",
+      "Bash(git -C \"C:\\\\Users\\\\user\\\\Desktop\\\\Project\\\\260226_orches_2\" status)"
+    ]
+  },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "context7"
   ],
-  "permissions": {
-    "allow": [
-      "Bash(tree:*)"
-    ]
+  "enabledPlugins": {
+    "web-autopilot@local": true
   }
 }
