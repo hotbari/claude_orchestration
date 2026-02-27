@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+<<<<<<< HEAD
       "Bash(tree:*)",
       "Bash(ls:*)",
       "Bash(test -f:*)",
@@ -13,5 +14,9 @@
   ],
   "enabledPlugins": {
     "web-autopilot@local": true
+=======
+      "Bash(claude mcp list:*)"
+    ]
+>>>>>>> origin/main
   }
 }
