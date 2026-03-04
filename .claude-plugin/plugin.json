@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Figma-to-production web service automation pipeline. Transforms Figma designs into complete fullstack applications (Next.js + FastAPI + PostgreSQL) through 6 phases: design analysis, requirements, architecture, implementation, QA, and completion.",
   "author": {
-    "name": "OMC Community"
+    "name": "hotbari"
   },
   "keywords": ["figma", "web", "automation", "fullstack", "nextjs", "fastapi", "design-to-code"],
   "skills": [
@@ -20,7 +20,7 @@
     {
       "name": "requirements",
       "path": "skills/requirements/SKILL.md",
-      "description": "Phase 2: Generate PRD, API spec, DB schema through user interview"
+      "description": "Phase 2: Interactive spec-writer agent - consultant-grade PRD, API spec, DB schema, tech stack through 7-stage dialogue"
     },
     {
       "name": "architecture",

@@ -116,9 +116,9 @@ for (const phase of phases) {
 - 출력: `design-analysis.md`
 
 #### Phase 2: requirements
-- 사용자 인터뷰로 요구사항 수집
-- PRD, API 명세, DB 스키마 생성
-- 출력: `prd.md`, `api-spec.md`, `db-schema.md`, `tech-stack.md`
+- 7단계 대화형 spec-writer 에이전트가 컨설턴트급 명세 작성
+- 근거와 대안 제시, 업계 사례 인용, 문서 간 교차 검증
+- 출력: `prd.md`, `api-spec.md`, `db-schema.md`, `tech-stack.md`, `spec-writer-decisions.md`
 
 #### Phase 3: architecture
 - 시스템 아키텍처 설계
