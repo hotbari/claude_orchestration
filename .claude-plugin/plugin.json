@@ -1,0 +1,46 @@
+{
+  "name": "web-autopilot",
+  "version": "0.1.0",
+  "description": "Figma-to-production web service automation pipeline. Transforms Figma designs into complete fullstack applications (Next.js + FastAPI + PostgreSQL) through 6 phases: design analysis, requirements, architecture, implementation, QA, and completion.",
+  "author": {
+    "name": "OMC Community"
+  },
+  "keywords": ["figma", "web", "automation", "fullstack", "nextjs", "fastapi", "design-to-code"],
+  "skills": [
+    {
+      "name": "web-autopilot",
+      "path": "skills/pipeline/SKILL.md",
+      "description": "Full pipeline: Figma to production web service (all 6 phases)"
+    },
+    {
+      "name": "design-analysis",
+      "path": "skills/design-analysis/SKILL.md",
+      "description": "Phase 1: Analyze Figma designs and extract components, tokens, flows"
+    },
+    {
+      "name": "requirements",
+      "path": "skills/requirements/SKILL.md",
+      "description": "Phase 2: Generate PRD, API spec, DB schema through user interview"
+    },
+    {
+      "name": "architecture",
+      "path": "skills/architecture/SKILL.md",
+      "description": "Phase 3: Design system architecture and tech stack"
+    },
+    {
+      "name": "implementation",
+      "path": "skills/implementation/SKILL.md",
+      "description": "Phase 4: Generate working Next.js + FastAPI code"
+    },
+    {
+      "name": "qa",
+      "path": "skills/qa/SKILL.md",
+      "description": "Phase 5: Testing, linting, type-checking with ralph-loop"
+    },
+    {
+      "name": "completion",
+      "path": "skills/completion/SKILL.md",
+      "description": "Phase 6: Final verification and deployment readiness"
+    }
+  ]
+}
