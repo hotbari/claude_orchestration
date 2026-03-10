@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Web Autopilot Settings",
+  "description": "Configuration for Figma-to-production web service automation",
+
+  "project": {
+    "outputDir": ".omc/web-projects",
+    "serviceNamePattern": "[a-z][a-z0-9-]*",
+    "defaultServiceName": "my-service"
+  },
+
+  "figma": {
+    "apiKeySource": "mcp.json",
+    "defaultFileUrl": "",
+    "exportFormats": ["png", "svg"],
+    "nodeTypes": ["FRAME", "COMPONENT", "INSTANCE"]
+  },
+
+  "techStack": {
+    "frontend": {
+      "framework": "next.js",
+      "version": "15.x",
+      "language": "typescript",
+      "uiLibrary": "shadcn/ui",
+      "styling": "tailwindcss",
+      "stateManagement": "zustand"
+    },
+    "backend": {
+      "framework": "fastapi",
+      "version": "0.115.x",
+      "language": "python",
+      "database": "postgresql",
+      "orm": "sqlalchemy",
+      "auth": "jwt"
+    },
+    "database": {
+      "engine": "postgresql",
+      "version": "17",
+      "migration": "alembic"
+    }
+  },
+
+  "pipeline": {
+    "phases": {
+      "design-analysis": {
+        "enabled": true,
+        "autoProgress": false,
+        "agent": "figma-analyzer",
+        "model": "sonnet"
+      },
+      "requirements": {
+        "enabled": true,
+        "autoProgress": false,
+        "agent": "analyst",
+        "model": "opus",
+        "skipInterviewIfDraft": false
+      },
+      "architecture": {
+        "enabled": true,
+        "autoProgress": false,
+        "agent": "architect",
+        "model": "opus"
+      },
+      "implementation": {
+        "enabled": true,
+        "autoProgress": true,
+        "parallelMode": "ultrawork",
+        "agents": ["executor", "designer"]
+      },
+      "qa": {
+        "enabled": true,
+        "autoProgress": true,
+        "ralphLoop": true,
+        "maxIterations": 5
+      },
+      "deployment": {
+        "enabled": true,
+        "autoProgress": false,
+        "dockerize": true
+      },
+      "completion": {
+        "enabled": true,
+        "architectVerification": true
+      }
+    },
+    "stopOnError": true,
+    "saveIntermediateState": true
+  },
+
+  "development": {
+    "ports": {
+      "frontend": 3000,
+      "backend": 8000,
+      "database": 5432
+    },
+    "docker": {
+      "composeVersion": "3.8",
+      "network": "web-autopilot-network",
+      "volumes": {
+        "postgres": "web-autopilot-db"
+      }
+    },
+    "logging": {
+      "level": "info",
+      "saveToFile": true,
+      "filePath": ".omc/logs/pipeline.log"
+    }
+  },
+
+  "codeGeneration": {
+    "typescript": {
+      "strict": true,
+      "target": "ES2022",
+      "moduleResolution": "bundler"
+    },
+    "linting": {
+      "enabled": true,
+      "tool": "eslint",
+      "autoFix": true
+    },
+    "formatting": {
+      "enabled": true,
+      "tool": "prettier",
+      "printWidth": 100,
+      "singleQuote": true,
+      "trailingComma": "es5"
+    },
+    "testing": {
+      "framework": "vitest",
+      "coverage": {
+        "enabled": true,
+        "threshold": 80
+      }
+    }
+  },
+
+  "validation": {
+    "design": {
+      "minScreenCount": 1,
+      "requireComponents": true,
+      "requireDesignTokens": false
+    },
+    "api": {
+      "requireAuth": true,
+      "requireValidation": true,
+      "requireErrorHandling": true
+    },
+    "database": {
+      "requireIndexes": true,
+      "requireConstraints": true,
+      "warnOnMissingForeignKeys": true
+    }
+  },
+
+  "deployment": {
+    "environment": "development",
+    "healthCheck": {
+      "enabled": true,
+      "interval": 30,
+      "timeout": 10,
+      "retries": 3
+    },
+    "resources": {
+      "frontend": {
+        "memory": "512M",
+        "cpus": "0.5"
+      },
+      "backend": {
+        "memory": "1G",
+        "cpus": "1.0"
+      },
+      "database": {
+        "memory": "512M",
+        "cpus": "0.5"
+      }
+    }
+  }
+}

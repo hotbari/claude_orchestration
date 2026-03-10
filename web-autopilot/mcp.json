@@ -1,0 +1,14 @@
+{
+    "enabledPlugins": {
+    "web-autopilot@local": true
+    },
+    "mcpServers": {
+    "figma": {
+        "command": "npx",
+        "args": ["-y", "figma-developer-mcp", "--stdio"],
+        "env": {
+        "FIGMA_API_KEY": "YOUR-FIGMA_API_KEY"
+            }
+        }
+    }
+}  
